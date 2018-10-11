@@ -1,0 +1,201 @@
+\documentclass{article}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{geometry}
+\usepackage{color}
+\usepackage{bm}
+\usepackage{indentfirst}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{diagbox}
+
+\begin{document}
+
+\vspace*{0.25cm}
+
+\hrulefill
+
+\thispagestyle{empty}
+
+\begin{center}
+\begin{large}
+\sc{UM--SJTU Joint Institute \vspace{0.3em} \\ Physics Laboratory \\(VE215)}
+\end{large}
+
+\hrulefill
+
+\vspace*{5cm}
+\begin{Large}
+\sc{{Laboratory Report}}
+\end{Large}
+
+\vspace{2em}
+
+\begin{large}
+\sc{{Exercise 5
+\vspace{0.5em}
+
+Filter Lab
+}}
+\end{large}
+\end{center}
+
+
+\vfill
+
+\begin{table}[h!]
+\flushleft
+\begin{tabular}{lll}
+Name: Yihao Liu \hspace*{2em}&
+ID: 515370910207\hspace*{2em}\\
+
+
+\\
+
+Date: 17 Nov 2016 
+
+\end{tabular}
+\end{table}
+
+\hfill
+\begin{tiny}
+[rev. 1.0]
+\end{tiny}
+\newpage
+
+
+\section{Goal}
+\begin{enumerate}
+\item
+Learn about four types of filters – Low-Pass, High-Pass, Band-Pass, and Band-reject.
+\item
+Learn about transfer functions.
+\item
+Predict the theoretical result and make comparison with lab data.
+\end{enumerate}
+
+\section{Introduction}
+
+\subsection{Filter}
+Filters are everywhere in our lives. The circuits built to operate on signals usually apply filters. For example, telephone lines pass the sounds at frequencies between about 100Hz and 3kHz and practically blocks all other frequencies.
+
+\subsection{Transfer function}
+Mathematically, the transfer function is used to analyze what the circuit did to the signal:
+
+$$Transfer\ function=\frac{Output\ signal}{Input\ signal}$$
+
+This function can also be expressed as
+
+$$H(\omega)=\frac{V_{out}(\omega)}{V_{in}(\omega)}$$
+
+The magnitude of the transfer function is called “voltage gain”, often measured as the ratio of the peak-to-peak (ppk) voltages:
+
+$$|H(\omega)|=\left|\frac{V_{out}(\omega)}{V_{in}(\omega)}\right|=\frac{V_{out,ppk}(\omega)}{V_{in,ppk}(\omega)}$$
+
+It is convenient to express and plot the magnitude of the transfer function on the logarithmic scale using decibels:
+
+$$|H(\omega)|_{db}=20\cdot\log_10\left(\frac{V_{out,ppk}(\omega)}{V_{in,ppk}(\omega)}\right)$$
+
+Since both ppk voltages are always positive, the transfer function magnitude is positive and thus can always be converted to decibels. The use of decibels allows us to review data over a broad range.
+
+\newpage
+
+\subsection{Types of filters}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=12cm]{1.png}
+	\label{fig-1}
+\end{figure}
+
+In the figure above are the four main families of filters:
+(1): Low-Pass; (2): High-Pass; (3): Band-Pass; (4): Band-reject (also called band-stop or notch)
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=12cm]{2.png}
+	\label{fig-2}
+\end{figure}
+
+Filter circuits, which you are going to build in this lab, contain resistors, capacitors, and inductors. They are all passive filters.
+
+\newpage
+
+\subsection{High-Pass filter}
+
+The high-pass filter we are going to build uses a capacitor and a resistor.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=12cm]{3.png}
+	\label{fig-3}
+\end{figure}
+
+\subsection{Low-Pass filter}
+
+The low-pass filter we are going to build uses a capacitor and a resistor.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=12cm]{4.png}
+	\label{fig-4}
+\end{figure}
+
+\subsection{Band-Pass filter}
+
+The band-pass filter we are going to build uses a capacitor, an inductor and a resistor.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=12cm]{5.png}
+	\label{fig-5}
+\end{figure}
+
+\newpage
+
+\subsection{Band-Stop filter}
+
+The band-stop filter we are going to build uses a capacitor, an inductor and a resistor.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=12cm]{6.png}
+	\label{fig-6}
+\end{figure}
+
+\newpage
+
+\section{Results and Discussion}
+
+\subsection{Low-pass Filter}
+
+\input{table_low}
+
+\subsection{High-pass Filter}
+
+\input{table_high}
+
+\subsection{Band-pass Filter}
+
+\input{table_band_pass}
+
+\subsection{Band-reject Filter}
+
+\input{table_band_reject}
+
+\newpage
+
+\section{Conclusion}
+We learned about four types of filters – Low-Pass, High-Pass, Band-Pass, and Band-reject.\\
+We learn about transfer functions.\\
+We predicted the theoretical result and make comparison with lab data.
+
+\section{Reference}
+Lab 5 Manual.
+
+\section{Pre-lab and Data sheet}
+
+\end{document}
